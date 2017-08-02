@@ -1,5 +1,5 @@
 {
-  "name": "firebase",
+  "name": "@cutii/firebase",
   "version": "4.2.0",
   "description": "Firebase JavaScript library for web and Node.js",
   "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/firebase/firebase-js-sdk.git"
+    "url": "git+https://github.com/cutii/firebase-js-sdk.git"
   },
   "scripts": {
     "build": "gulp build",
@@ -45,7 +45,7 @@
     "filesize": "^3.5.6",
     "git-rev-sync": "^1.9.0",
     "google-closure-compiler-js": "^20170218.0.0",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-browserify": "^0.5.1",
     "gulp-clone": "^1.0.0",
@@ -107,5 +107,11 @@
       "prettier --write --single-quote",
       "git add"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/cutii/firebase-js-sdk/issues"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
