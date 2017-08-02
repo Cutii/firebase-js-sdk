@@ -81,14 +81,14 @@ export default class SWController extends ControllerInterface {
         }
 
         const notificationDetails = this.getNotificationData_(msgPayload);
-        if (notificationDetails) {
+        if (this.bgMessageHandler_) {
+          return this.bgMessageHandler_(msgPayload);
+        } else if (notificationDetails) {
           const notificationTitle = notificationDetails.title || '';
           return (self as any).registration.showNotification(
             notificationTitle,
             notificationDetails
           );
-        } else if (this.bgMessageHandler_) {
-          return this.bgMessageHandler_(msgPayload);
         }
       }
     );
