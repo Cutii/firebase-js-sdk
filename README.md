@@ -1,5 +1,16 @@
 [![Build Status](https://travis-ci.org/firebase/firebase-js-sdk.svg?branch=master)](https://travis-ci.org/firebase/firebase-js-sdk)
 
+# Publish new version
+
+```
+// 1 - Bump version number
+// 2 - Build
+npm run build:package
+// 3 - Publish
+cd dist/package
+npm publish --access public
+```
+
 # Firebase Javascript SDK
 
 The Firebase JavaScript SDK implements the client-side libraries used by
@@ -16,8 +27,8 @@ To get started using Firebase, see
 
 ### Prerequisites
 
-Before you can start working on the Firebase JS SDK, you need to have Node.js 6.0 or 
-greater installed on your machine. After doing this, you must also install the 
+Before you can start working on the Firebase JS SDK, you need to have Node.js 6.0 or
+greater installed on your machine. After doing this, you must also install the
 dependencies for this package.
 
 To download Node.js visit https://nodejs.org/en/download/.
@@ -58,8 +69,8 @@ gulp --tasks
 
 ## Testing the SDK
 
-To run all tests for the SDK you must first supply a firebase project config for 
-your tests. This is done by creating a file called `project.json` and at the 
+To run all tests for the SDK you must first supply a firebase project config for
+your tests. This is done by creating a file called `project.json` and at the
 following path:
 
 ```
@@ -76,7 +87,7 @@ There are several types of available tests:
 - Unit Tests (`gulp test:unit`)
 - Integration Tests (`gulp test:integration`)
 
-_NOTE: You can execute each of these tasks on their own (e.g. you can run 
+_NOTE: You can execute each of these tasks on their own (e.g. you can run
 `gulp test:unit` to run exclusively the smoke tests from your CLI)_
 
 ## Building the SDK
@@ -117,7 +128,7 @@ These files are processed in the following flow:
 1. Prebuilt browser binaries are ready to consume individually in the browser
 however we need to wrap them in a CJS module wrapper for node/webpack/browserify
 consumption.
-1. The Firebase App binary is generated (from TS) and concatenated with the 
+1. The Firebase App binary is generated (from TS) and concatenated with the
 browser binaries of each individual module to create `firebase.js`.
 
 #### Legacy Files
